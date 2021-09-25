@@ -1,0 +1,29 @@
+[
+  {
+    "data": "课程",
+    "children": [
+      {
+        "data": "数学",
+        "children": [
+          {
+            "data": "匹配|20210603",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data": "作业",
+    "children": [
+      {
+        "data": "数学|20200306",
+        "children": []
+      }
+    ]
+  },
+  {
+    "data": "实习",
+    "children": []
+  }
+]
