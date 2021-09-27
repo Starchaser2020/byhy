@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>942</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>备忘录</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{	
+	font-family:微软雅黑;
+	font-size:14px;
+	color: #1d649c;
+}
+
+QGroupBox{
+   font-family:微软雅黑;
+   font-size:15px;
+   color: rgb(126, 0, 0);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLineEdit" name="keywords">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入查询关键字</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="showSchedule">
+            <property name="text">
+             <string>计划排序</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="searchInTree">
+            <property name="text">
+             <string>过滤</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="ItemTree" name="notesTree">
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="headerHidden">
+           <bool>false</bool>
+          </property>
+          <property name="columnCount">
+           <number>2</number>
+          </property>
+          <attribute name="headerVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="headerDefaultSectionSize">
+           <number>150</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string notr="true">作业</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string notr="true">提交日期</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLineEdit" name="keywords_2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>请输入查询关键字</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="searchInTextEditor">
+            <property name="text">
+             <string>过滤</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>942</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>操作</string>
+    </property>
+    <addaction name="actionAddSubFolder"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionAddSubFolder"/>
+   <addaction name="actionAddSibleFolder"/>
+   <addaction name="actionAddNote"/>
+   <addaction name="actionDelete"/>
+  </widget>
+  <action name="actionAddSubFolder">
+   <property name="icon">
+    <iconset>
+     <normaloff>Images/subfolder.png</normaloff>Images/subfolder.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加子目录</string>
+   </property>
+   <property name="toolTip">
+    <string>添加子目录</string>
+   </property>
+  </action>
+  <action name="actionAddNote">
+   <property name="icon">
+    <iconset>
+     <normaloff>Images/note.gif</normaloff>Images/note.gif</iconset>
+   </property>
+   <property name="text">
+    <string>添加笔记</string>
+   </property>
+   <property name="toolTip">
+    <string>添加笔记</string>
+   </property>
+  </action>
+  <action name="actionAddSibleFolder">
+   <property name="icon">
+    <iconset>
+     <normaloff>Images/siblefolder.png</normaloff>Images/siblefolder.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加兄弟目录</string>
+   </property>
+   <property name="toolTip">
+    <string>添加兄弟目录</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>Images/save.png</normaloff>Images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存目录树</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset>
+     <normaloff>Images/delete.png</normaloff>Images/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="toolTip">
+    <string>删除</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ItemTree</class>
+   <extends>QTreeWidget</extends>
+   <header>ItemTree.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
