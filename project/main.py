@@ -13,8 +13,16 @@ class WinMain(QMainWindow):
         self.ui.setupUi(self)
 
 
+class WinLogin(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_sign()
+        self.ui.setupUi(self)
+
+
 app = QApplication()
-app.setStyle('Fusion')
+# app.setStyle('Fusion')
 SI.mainWin = WinMain()
-SI.mainWin.show()
+SI.loginWin = WinLogin()
+SI.loginWin.show()
 app.exec()
